@@ -1,0 +1,16 @@
+/* paleta de colores */
+:root {
+    --bg: #fcadc7;
+    --text: #2b5b07;
+    --accent1: #e962bc;
+    --accent2: #d3f1b8;
+    --accent3: #87c84f;
+}
+
+body.dark {
+    --bg: #06050c;
+    --text: #fffae1;
+    --accent1: #927ad4;
+    --accent2: #fcf79b;
+    --accent3: #eac83f;
+}
