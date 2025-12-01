@@ -1,16 +1,79 @@
-/* paleta de colores */
+/* colores y movimiento */
+
 :root {
-    --bg: #fcadc7;
-    --text: #2b5b07;
-    --accent1: #e962bc;
-    --accent2: #d3f1b8;
-    --accent3: #87c84f;
+    --bg: #fafafa;
+    --text: #222;
+    --accent: #ffb6c1;
+    --widget-bg: #ffffff;
+    --widget-border: #e0e0e0;
 }
 
 body.dark {
-    --bg: #06050c;
-    --text: #fffae1;
-    --accent1: #927ad4;
-    --accent2: #fcf79b;
-    --accent3: #eac83f;
+    --bg: #1b1b1b;
+    --text: #eaeaea;
+    --accent: #d47ad4;
+    --widget-bg: #242424;
+    --widget-border: #333;
+}
+
+@keyframes levitar {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-15px) rotate(6deg);
+    }
+}
+
+/* -------------------- */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid var(--widget-border);
+    background: var(--widget-bg);
+    position: sticky;
+    top: 0;
+}
+
+.cambiar-tema {
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+    text-shadow: 2px 2px 3px #0003;
+    animation: levitar 4s ease-in-out infinite alternate;
+}
+
+/* --------------- */
+
+.desktop {
+    flex: 1;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.widget {
+    background: var(--widget-bg);
+    border: 1px solid var(--widget-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px #0001;
 }
