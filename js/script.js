@@ -14,7 +14,7 @@ function Actbienvenida() {
 }
 
 // modo claro/oscuro
-const themeBtn = document.querySelector(".cambiar-tema");
+const themeBtn = document.getElementById("cambiar-tema");
 
 themeBtn.onclick = () => {
     document.body.classList.toggle("dark");

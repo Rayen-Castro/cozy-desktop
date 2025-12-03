@@ -1,0 +1,38 @@
+.cambiar-tema {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    padding: 0;
+}
+
+.cambiar-tema::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    transition: background 0.3s ease;
+}
+
+.cambiar-tema::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--bg);
+    transform: translateX(-15px);
+    transition: transform 0.4s ease;
+}
+
+body.dark .cambiar-tema::before {
+    background: var(--text2);
+}
+
+body.dark .cambiar-tema::after {
+    transform: translateX(-8px);
+    background: var(--accent);
+}
