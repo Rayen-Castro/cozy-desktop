@@ -3,7 +3,7 @@
 :root {
     --bg: #fdf6f0;
     --text: #523b3b;
-    --text2: #526941;
+    --text2: #694141;
     --accent: #e4a5b4;
     --widget-bg: #fff1e6;
     --widget-border: #f5c7aa;
@@ -12,7 +12,7 @@
 body.dark {
     --bg: #1e1a1d;
     --text: #f3d8d8;
-    --text2: #b3d4c3;
+    --text2: #e6e4bf;
     --accent: #c47b97;
     --widget-bg: #2a2428;
     --widget-border: #3f3138;
@@ -51,15 +51,6 @@ body {
     color: var(--text2);
     position: sticky;
     top: 0;
-}
-
-.cambiar-tema {
-    cursor: pointer;
-    font-size: 20px;
-    background: none;
-    border: none;
-    text-shadow: 2px 2px 3px var(--text2);
-    animation: levitar 4s ease-in-out infinite alternate;
 }
 
 /* --------------- */
