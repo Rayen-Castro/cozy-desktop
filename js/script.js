@@ -1,4 +1,15 @@
 const bienvenida = document.getElementById("bienvenida");
+const gifbienvenida = document.getElementById("gif-bienvenida");
+
+function cambiargif() {
+    const gifs = [
+    "https://i.gifer.com/1FP5.gif",
+    "https://i.gifer.com/5BuS.gif"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * gifs.length);
+    gifbienvenida.src = gifs[randomIndex];
+}
 
 // Widget: Bienvenida
 function Actbienvenida() {
@@ -27,4 +38,5 @@ window.onload = () => {
     }
 
     Actbienvenida();
+    cambiargif();
 };

@@ -70,3 +70,17 @@ body {
     padding: 20px;
     box-shadow: 0 2px 4px #0001;
 }
+
+/* ------------------- */
+
+.cont-bienvenida {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#gif-bienvenida {
+    height: 60px;
+    width: 80px;
+    object-fit: contain;
+}
