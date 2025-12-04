@@ -8,7 +8,7 @@ function Actbienvenida() {
     if (hour < 6) msg = "¡Deberías estar durmiendo!";
     else if (hour < 12) msg = "¡Buenos días, Ray!";
     else if (hour < 19) msg = "¡Buenas tardes, Ray!";
-    else if (hour < 2) msg = "¡Buenas noches, Ray!";
+    else msg = "¡Buenas noches, Ray!";
 
     bienvenida.textContent = msg;
 }
