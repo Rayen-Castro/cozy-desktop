@@ -32,6 +32,16 @@ themeBtn.onclick = () => {
     localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
 };
 
+
+document.getElementById("openPomodoro").onclick = () => {
+    document.getElementById("pomodoroWidget").style.display = "flex";
+};
+
+document.getElementById("closePomodoro").onclick = () => {
+    document.getElementById("pomodoroWidget").style.display = "none";
+};
+
+
 window.onload = () => {
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
