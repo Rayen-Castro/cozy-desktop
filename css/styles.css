@@ -46,7 +46,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 25px;
+    padding: 0px 25px;
     background: var(--accent);
     color: var(--text2);
     position: sticky;
@@ -57,6 +57,7 @@ body {
 
 .desktop {
     flex: 1;
+    position: relative;
     padding: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
