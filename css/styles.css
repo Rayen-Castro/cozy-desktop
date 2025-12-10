@@ -7,6 +7,8 @@
     --accent: #e4a5b4;
     --widget-bg: #fff1e6;
     --widget-border: #f5c7aa;
+    --darker: #a17559;
+    --sweeter: 
 }
 
 body.dark {
@@ -16,6 +18,7 @@ body.dark {
     --accent: #c47b97;
     --widget-bg: #2a2428;
     --widget-border: #3f3138;
+    --darker: #21191d;
 }
 
 @keyframes levitar {
@@ -32,7 +35,6 @@ body.dark {
 
 body {
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
     background: var(--bg);
     color: var(--text);
     height: 100vh;
@@ -43,6 +45,9 @@ body {
 /* header */
 
 .header {
+    font-family: 'Bagel fat one';
+    font-weight: normal;
+    letter-spacing: 2px; 
     display: flex;
     justify-content: space-between;
     align-items: center;

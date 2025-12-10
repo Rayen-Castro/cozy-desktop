@@ -13,13 +13,121 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+
+    color: var(--text);
     background-color: var(--widget-bg);
     border: 2px solid var(--widget-border);
+    border-bottom: 8px solid var(--widget-border);
     border-radius: 14px;
+
+    font-family: 'Kumbh Sans', sans-serif;
     text-align: center;
+    cursor: pointer;
 }
 
 .widget-mini p {
     margin: 0;
     line-height: 1.1;
+}
+
+.widget-mini:active {
+    border-bottom: 2px solid var(--widget-border);
+    transform: translateY(4px);
+}
+
+/* ≧□≦ WIDGET */
+
+.widget-pomodoro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    width: 400px;
+    height: 280px;
+    padding: 12px;
+
+    background: var(--widget-bg);
+    border-top: 2px solid var(--widget-border);
+    border-bottom: 4px solid var(--darker);
+    border-left: 2px solid var(--widget-border);
+    border-right: 4px solid var(--darker);
+    border-radius: 4px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#time {
+    margin: 50px;
+    position: relative;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+
+#start {
+    position: absolute;
+    bottom: 20PX;
+    width: 80PX;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--widget-bg);
+    color:var(--text);
+
+    border-radius: 1px;
+    border-top: 2px solid var(--widget-border);
+    border-bottom: 4px solid var(--darker);
+    border-left: 2px solid var(--widget-border);
+    border-right: 4px solid var(--darker);
+}
+
+#start:active {
+    border-bottom: 3px solid var(--widget-border);
+    border-top: 3px solid var(--darker);
+    border-right: 3px solid var(--widget-border);
+    border-left: 3px solid var(--darker);
+}
+
+#bannerwidget {
+    height: 40px;
+    width: 400px;
+    border-radius: 2px;
+    position: absolute;
+    top: 12px;
+    background-color: var(--accent);
+}
+
+#bannerwidget h2 {
+    color: var(--text2);
+    margin-left: 10px;
+    line-height: 0px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: inline-block;
+}
+
+#closePomodoro {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    border-radius: 1px;
+    border-top: 2px solid var(--widget-border);
+    border-bottom: 4px solid var(--darker);
+    border-left: 2px solid var(--widget-border);
+    border-right: 4px solid var(--darker);
+
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--text2);
+    background-color: var(--widget-bg);
+}
+
+#closePomodoro:active {
+    border-bottom: 3px solid var(--widget-border);
+    border-top: 3px solid var(--darker);
+    border-right: 3px solid var(--widget-border);
+    border-left: 3px solid var(--darker);
 }
