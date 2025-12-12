@@ -44,7 +44,7 @@ document.getElementById("closePomodoro").onclick = () => {
 
 // --- Pomodoro Start / Pause / Resume / Reset ---
 
-let initialTime = 5;  // tiempo inicial
+let initialTime = 5;  
 let timeLeft = initialTime;
 let interval = null;
 let isPaused = false;
@@ -52,26 +52,23 @@ let isPaused = false;
 const timeDisplay = document.getElementById("time");
 const startBtn = document.getElementById("start");
 const resetBtn = document.getElementById("reset");
+const alarmSound = document.getElementById("reloj");
 
 const openWidget = document.getElementById("openPomodoro");
 const widget = document.getElementById("pomodoroWidget");
 const closeBtn = document.getElementById("closePomodoro");
 
 
-// ------ Formatea mm:ss ------
 function formatTime(seconds) {
     const m = Math.floor(seconds / 60);
     const s = seconds % 60;
     return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
 }
 
-// ------ Actualiza pantalla ------
 function renderTime() {
     timeDisplay.textContent = formatTime(timeLeft);
 }
 
-
-// ------ Start / Resume ------
 function startPomodoro() {
     if (interval) return;
 
@@ -82,7 +79,12 @@ function startPomodoro() {
         if (timeLeft <= 0) {
             clearInterval(interval);
             interval = null;
+
+            alarmSound.currentTime = 0;
+            alarmSound.play();
+
             startBtn.textContent = "Empezar";
+
             alert("¡Tiempo terminado!");
         }
     }, 1000);
@@ -91,8 +93,6 @@ function startPomodoro() {
     isPaused = false;
 }
 
-
-// ------ Pausa ------
 function pausePomodoro() {
     clearInterval(interval);
     interval = null;
@@ -100,8 +100,6 @@ function pausePomodoro() {
     isPaused = true;
 }
 
-
-// ------ Reset ------
 function resetPomodoro() {
     clearInterval(interval);
     interval = null;
@@ -111,22 +109,18 @@ function resetPomodoro() {
     renderTime();
 }
 
-
-// ------ Comportamiento del botón principal ------
 startBtn.addEventListener("click", () => {
     if (!interval && !isPaused) {
-        startPomodoro(); // iniciar por primera vez
+        startPomodoro(); 
     } else if (interval) {
-        pausePomodoro(); // pausar
+        pausePomodoro(); 
     } else if (!interval && isPaused) {
-        startPomodoro(); // reanudar
+        startPomodoro(); 
     }
 });
 
 resetBtn.addEventListener("click", resetPomodoro);
 
-
-// ------ Abrir y cerrar widget ------
 openWidget.addEventListener("click", () => {
     widget.style.display = "block";
 });
@@ -135,8 +129,6 @@ closeBtn.addEventListener("click", () => {
     widget.style.display = "none";
 });
 
-
-// Render inicial
 renderTime();
 
 
