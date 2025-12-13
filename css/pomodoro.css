@@ -64,6 +64,26 @@
 
 }
 
+#reset {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 40px;
+    border-radius: 2px;
+
+    cursor: pointer;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--widget-bg);
+    color: var(--text);
+
+    border-radius: 1px;
+    border-top: 2px solid var(--widget-border);
+    border-bottom: 4px solid var(--darker);
+    border-left: 2px solid var(--widget-border);
+    border-right: 4px solid var(--darker);
+}
+
 #start {
     position: absolute;
     bottom: 20PX;
@@ -80,6 +100,13 @@
     border-bottom: 4px solid var(--darker);
     border-left: 2px solid var(--widget-border);
     border-right: 4px solid var(--darker);
+}
+
+#reset:active {
+    border-bottom: 3px solid var(--widget-border);
+    border-top: 3px solid var(--darker);
+    border-right: 3px solid var(--widget-border);
+    border-left: 3px solid var(--darker);
 }
 
 #start:active {
