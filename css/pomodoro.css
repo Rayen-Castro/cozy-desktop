@@ -57,6 +57,12 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+#pomodoroMessage {
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
 #time {
     margin: 50px;
     position: relative;

@@ -79,13 +79,12 @@ function startPomodoro() {
         if (timeLeft <= 0) {
             clearInterval(interval);
             interval = null;
+            startBtn.textContent = "Empezar";
 
             alarmSound.currentTime = 0;
             alarmSound.play();
 
-            startBtn.textContent = "Empezar";
-
-            alert("¡Tiempo terminado!");
+            document.getElementById("pomodoroMessage").style.display = "block";
         }
     }, 1000);
 
